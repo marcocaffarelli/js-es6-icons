@@ -112,6 +112,7 @@ $(document).ready(function () {
     //console.log(element.name);
     const icona = `<div>
     <i class="fas fa-${element.name}"></i>
+    <div class="title" style="text-transform:uppercase">${element.name}</div>
     </div>
     `; 
     //console.log(icona);
