@@ -158,19 +158,75 @@ $(document).ready(function () {
     const selectElement = document.getElementById('type');
     //arrow function 
     selectElement.addEventListener('change', event => {
-      //choice è uguale al value dell'option
+      //choice è uguale text dell'option
       const choice = $("#type option:selected").text();
       if (choice == "Animali") {
+        //array newAnimals che contiene gli oggetti con family animali
         const newAnimals = newIcons.filter(icona => icona.family == "animali" )
-        console.log(newAnimals);
+        //console.log(newAnimals);
+        //ogni volta che avviene il change cancella i div figli diretti del div icons 
+        $('div.icons>div, i.fas, div.title').hide()
+        //ciclo forEach per inserire gli oggetti che fanno parte di newAnimals
+        newAnimals.forEach(element => {
+          //console.log(element.name);
+          const animale = `<div>
+          <i class="fas fa-${element.name}" style="color:${element.color}"></i>
+          <div class="title" style="text-transform:uppercase">${element.name}</div>
+          </div>
+          `; 
+          //console.log(icona);
+          container.innerHTML += animale;
+        });
+        container.innerHtml = newAnimals
       }else if(choice == "Cibo"){
+        //array newAnimals che contiene gli oggetti con family cibo
         const newFoods = newIcons.filter(icona => icona.family == "cibo" )
-        console.log(newFoods);
+        //console.log(newFoods);
+        //ogni volta che avviene il change cancella i div figli diretti del div icons 
+        $('div.icons>div, i.fas, div.title').hide()
+        //ciclo forEach per inserire gli oggetti che fanno parte di newFoods
+        newFoods.forEach(element => {
+          //console.log(element.name);
+          const food = `<div>
+          <i class="fas fa-${element.name}" style="color:${element.color}"></i>
+          <div class="title" style="text-transform:uppercase">${element.name}</div>
+          </div>
+          `; 
+          //console.log(icona);
+          container.innerHTML += food;
+        });
       }else if(choice == "User"){
+        //array newAnimals che contiene gli oggetti con family user
         const newUsers = newIcons.filter(icona => icona.family == "user" )
-        console.log(newUsers);
+        //console.log(newUsers);
+        //ogni volta che avviene il change cancella i div figli diretti del div icons 
+        $('div.icons>div, i.fas, div.title').hide()
+        //ciclo forEach per inserire gli oggetti che fanno parte di newUsers
+        newUsers.forEach(element => {
+          //console.log(element.name);
+          const user = `<div>
+          <i class="fas fa-${element.name}" style="color:${element.color}"></i>
+          <div class="title" style="text-transform:uppercase">${element.name}</div>
+          </div>
+          `; 
+          //console.log(icona);
+          container.innerHTML += user;
+        });
       }else{
-        console.log(newIcons);
+        //console.log(newIcons);
+        //ogni volta che avviene il change cancella i div figli diretti del div icons 
+        $('div.icons>div, i.fas, div.title').hide()
+        //ciclo forEach per inserire gli oggetti che fanno parte di newIcons
+        newIcons.forEach(element => {
+          //console.log(element.name);
+          const icona = `<div>
+          <i class="fas fa-${element.name}" style="color:${element.color}"></i>
+          <div class="title" style="text-transform:uppercase">${element.name}</div>
+          </div>
+          `; 
+          //console.log(icona);
+          container.innerHTML += icona;
+        });
       };
 	  
     });
