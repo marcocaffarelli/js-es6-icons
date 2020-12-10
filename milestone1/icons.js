@@ -48,6 +48,54 @@ $(document).ready(function () {
     prefix :"fas",
     type : "fa",
     family : "animali",
+    },
+    {
+    name : "pizza-slice",
+    prefix :"fas",
+    type : "fa",
+    family : "cibo",
+    },
+    {
+    name : "hotdog",
+    prefix :"fas",
+    type : "fa",
+    family : "cibo",
+    },
+    {
+    name : "bacon",
+    prefix :"fas",
+    type : "fa",
+    family : "cibo",
+    },
+    {
+    name : "hamburger",
+    prefix :"fas",
+    type : "fa",
+    family : "cibo",
+    },
+    {
+    name : "user-md",
+    prefix :"fas",
+    type : "fa",
+    family : "user",
+    },
+    {
+    name : "user-astronaut",
+    prefix :"fas",
+    type : "fa",
+    family : "user",
+    },
+    {
+    name : "user-ninja",
+    prefix :"fas",
+    type : "fa",
+    family : "user",
+    },
+    {
+    name : "user-secret",
+    prefix :"fas",
+    type : "fa",
+    family : "user",
     }
 
   ]

@@ -1,17 +1,130 @@
 $(document).ready(function () {
     // Qui le icone che abbiamo definito nella milestone 1
+  const icons =  [
+    {
+    name : "cat",
+    prefix :"fas",
+    type : "fa",
+    family : "animali",
+    },
+    {
+    name : "crow",
+    prefix :"fas" ,
+    type : "fa",
+    family : "animali",
+    },
+    {
+    name : "dog",
+    prefix :"fas",
+    type : "fa",
+    family : "animali",
+    },
+    {
+    name : "dove",
+    prefix :"fas",
+    type : "fa",
+    family : "animali",
+    },
+    {
+    name : "dragon",
+    prefix :"fas",
+    type : "fa",
+    family : "animali",
+    },
+    {
+    name : "horse",
+    prefix :"fas",
+    type : "fa",
+    family : "animali",
+    },
+    {
+    name : "hippo",
+    prefix :"fas",
+    type : "fa",
+    family : "animali",
+    },
+    {
+    name : "fish",
+    prefix :"fas",
+    type : "fa",
+    family : "animali",
+    },
+    {
+    name : "pizza-slice",
+    prefix :"fas",
+    type : "fa",
+    family : "cibo",
+    },
+    {
+    name : "hotdog",
+    prefix :"fas",
+    type : "fa",
+    family : "cibo",
+    },
+    {
+    name : "bacon",
+    prefix :"fas",
+    type : "fa",
+    family : "cibo",
+    },
+    {
+    name : "hamburger",
+    prefix :"fas",
+    type : "fa",
+    family : "cibo",
+    },
+    {
+    name : "user-md",
+    prefix :"fas",
+    type : "fa",
+    family : "user",
+    },
+    {
+    name : "user-astronaut",
+    prefix :"fas",
+    type : "fa",
+    family : "user",
+    },
+    {
+    name : "user-ninja",
+    prefix :"fas",
+    type : "fa",
+    family : "user",
+    },
+    {
+    name : "user-secret",
+    prefix :"fas",
+    type : "fa",
+    family : "user",
+    }
+  ]
+  console.log(icons);
   
-    // definiamo dei colori per le icone (blue, orange, purple)
+    
+  // Selezioniamo il container icons
+  const container = document.querySelector('.icons')
   
-  
-    //aggiungiamo dei colori usando una funzione
-  
-  
-    //inseriamo le icone colorate nel container
-  
+  //Con il ciclo forEach aggiungo nell'html gli oggetti dell'array
+  icons.forEach(element => {
+    //console.log(element.name);
+    const icona = `<div>
+    <i class="fas fa-${element.name}"></i>
+    </div>
+    `; 
+    //console.log(icona);
+    container.innerHTML += icona;
   });
-  
-  
+    
+  // definiamo dei colori per le icone (blue, orange, purple)
+  const blue = "#0000FF";
+  const orange = "#FFA500";
+  const purple = "#A020F0";
+
+  //inseriamo le icone colorate nel container
+ 
+
+
+});
   /* ---- FUNCTIONS ----*/
   //1. Funzione milestone 1
   
