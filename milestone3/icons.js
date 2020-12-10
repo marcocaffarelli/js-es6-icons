@@ -149,10 +149,32 @@ $(document).ready(function () {
     //estrapoliamo i tipi di icone
     const select = $('select#type');
     //aggiungiamo i tipi alla select
-    const animali = select.append('<option value="">Animali</option>');
-    const cibo = select.append('<option value="">Cibo</option>');
-    const user = select.append('<option value="">User</option>');
+    const animali = select.append('<option value="animali">Animali</option>');
+    const cibo = select.append('<option value="cibo">Cibo</option>');
+    const user = select.append('<option value="user">User</option>');
     //al change mostriamo solo le icone filtrate
+
+    
+    const selectElement = document.getElementById('type');
+    //arrow function 
+    selectElement.addEventListener('change', event => {
+      //choice è uguale al value dell'option
+      const choice = $("#type option:selected").text();
+      if (choice == "Animali") {
+        const newAnimals = newIcons.filter(icona => icona.family == "animali" )
+        console.log(newAnimals);
+      }else if(choice == "Cibo"){
+        const newFoods = newIcons.filter(icona => icona.family == "cibo" )
+        console.log(newFoods);
+      }else if(choice == "User"){
+        const newUsers = newIcons.filter(icona => icona.family == "user" )
+        console.log(newUsers);
+      }else{
+        console.log(newIcons);
+      };
+	  
+    });
+    
     //mostriamo come passare un parametro a change e contemporaneamente destrutturiamo
    
    
@@ -160,3 +182,5 @@ $(document).ready(function () {
    /* ---- FUNCTIONS ----*/
    
    });
+
+   
