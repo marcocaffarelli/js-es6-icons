@@ -55,15 +55,19 @@ $(document).ready(function () {
 
   
   // Selezioniamo il container icons
-  const container = $('div.icons');
-  //const container = document.getElementsByClassName('icons')
+  // const container = $('div.icons');
+  // console.log(container);
+  const container = document.querySelector('.icons')
 
+  //Con il ciclo forEach aggiungo nell'html gli oggetti dell'array
   icons.forEach(element => {
-  container.innerHTML += `
-  <div>
+    //console.log(element.name);
+    const icona = `<div>
     <i class="fas fa-${element.name}"></i>
-  </div>
-  `; 
+    </div>
+    `; 
+    //console.log(icona);
+    container.innerHTML += icona;
   });
   
   //const gatto = $('div.icons').html('<div><i class="fas fa-cat"></i><div class="title">CAT</div>');
