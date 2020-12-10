@@ -1,11 +1,72 @@
 $(document).ready(function () {
-    // Creiamo array di oggetti per le icone con le seguenti proprieta: name, prefix, type, family 
+  // Creiamo array di oggetti per le icone con le seguenti proprieta: name, prefix, type, family 
+  const icons =  [
+    {
+    name : "gatto",
+    prefix :"",
+    type : "",
+    family : "",
+    },
+    {
+    name : "corvo",
+    prefix :"" ,
+    type : "",
+    family : "",
+    },
+    {
+    name : "cane",
+    prefix :"",
+    type : "",
+    family : "",
+    },
+    {
+    name : "colomba",
+    prefix :"",
+    type : "",
+    family : "",
+    },
+    {
+    name : "drago",
+    prefix :"",
+    type : "",
+    family : "",
+    },
+    {
+    name : "cavallo",
+    prefix :"",
+    type : "",
+    family : "",
+    },
+    {
+    name : "ippopotamo",
+    prefix :"",
+    type : "",
+    family : "",
+    },
+    {
+    name : "pesce",
+    prefix :"",
+    type : "",
+    family : "",
+    },
+
+]
+  // Selezioniamo il container icons
   
-    // Semezioniamo il container icons
+  //inseriamo le icone nel container (possiamo creare una funzione tipo print() per inserire gli elementi e richiamarla qui)
   
-    //inseriamo le icone nel container (possiamo creare una funzione tipo print() per inserire gli elementi e richiamarla qui)
-  
-  });
+
+
+
+
+
+
+
+
+
+
+
+});
   
   
   /* ---- FUNCTIONS ----*/
