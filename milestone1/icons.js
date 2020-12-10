@@ -2,49 +2,49 @@ $(document).ready(function () {
   // Creiamo array di oggetti per le icone con le seguenti proprieta: name, prefix, type, family 
   const icons =  [
     {
-    name : "gatto",
+    name : "cat",
     prefix :"fas",
     type : "fa",
     family : "animali",
     },
     {
-    name : "corvo",
+    name : "crow",
     prefix :"fas" ,
     type : "fa",
     family : "animali",
     },
     {
-    name : "cane",
+    name : "dog",
     prefix :"fas",
     type : "fa",
     family : "animali",
     },
     {
-    name : "colomba",
+    name : "dove",
     prefix :"fas",
     type : "fa",
     family : "animali",
     },
     {
-    name : "drago",
+    name : "dragon",
     prefix :"fas",
     type : "fa",
     family : "animali",
     },
     {
-    name : "cavallo",
+    name : "horse",
     prefix :"fas",
     type : "fa",
     family : "animali",
     },
     {
-    name : "ippopotamo",
+    name : "hippo",
     prefix :"fas",
     type : "fa",
     family : "animali",
     },
     {
-    name : "pesce",
+    name : "fish",
     prefix :"fas",
     type : "fa",
     family : "animali",
@@ -55,7 +55,18 @@ $(document).ready(function () {
 
   
   // Selezioniamo il container icons
-  const gatto = $('div.icons').html('<div><i class="fas fa-cat"></i><div class="title">CAT</div>');
+  const container = $('div.icons');
+  //const container = document.getElementsByClassName('icons')
+
+  icons.forEach(element => {
+  container.innerHTML += `
+  <div>
+    <i class="fas fa-${element.name}"></i>
+  </div>
+  `; 
+  });
+  
+  //const gatto = $('div.icons').html('<div><i class="fas fa-cat"></i><div class="title">CAT</div>');
   //const corvo = $('div.icons').html('<div><i class="fas fa-crow"></i><div class="title">CROW</div>');
   //const cane = $('div.icons').html('<div><i class="fas fa-dog"></i><div class="title">DOG</div>');
   //const colomba = $('div.icons').html('<div><i class="fas fa-dove"></i><div class="title">DOVE</div>');
