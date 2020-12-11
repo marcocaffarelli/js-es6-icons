@@ -157,7 +157,7 @@ $(document).ready(function () {
     
     const selectElement = document.getElementById('type');
     //arrow function 
-    selectElement.addEventListener('change', event => {
+    selectElement.addEventListener('change', () => {
       //choice è uguale text dell'option
       const choice = $("#type option:selected").text();
       if (choice == "Animali") {
