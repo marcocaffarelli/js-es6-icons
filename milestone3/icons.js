@@ -167,16 +167,7 @@ $(document).ready(function () {
         //ogni volta che avviene il change cancella i div figli diretti del div icons 
         $('div.icons>div, i.fas, div.title').hide()
         //ciclo forEach per inserire gli oggetti che fanno parte di newAnimals
-        newAnimals.forEach(element => {
-          //console.log(element.name);
-          const animale = `<div>
-          <i class="fas fa-${element.name}" style="color:${element.color}"></i>
-          <div class="title" style="text-transform:uppercase">${element.name}</div>
-          </div>
-          `; 
-          //console.log(icona);
-          container.innerHTML += animale;
-        });
+        filterFunction(newAnimals)
         container.innerHtml = newAnimals
       }else if(choice == "Cibo"){
         //array newAnimals che contiene gli oggetti con family cibo
@@ -185,16 +176,7 @@ $(document).ready(function () {
         //ogni volta che avviene il change cancella i div figli diretti del div icons 
         $('div.icons>div, i.fas, div.title').hide()
         //ciclo forEach per inserire gli oggetti che fanno parte di newFoods
-        newFoods.forEach(element => {
-          //console.log(element.name);
-          const food = `<div>
-          <i class="fas fa-${element.name}" style="color:${element.color}"></i>
-          <div class="title" style="text-transform:uppercase">${element.name}</div>
-          </div>
-          `; 
-          //console.log(icona);
-          container.innerHTML += food;
-        });
+        filterFunction(newFoods)
       }else if(choice == "User"){
         //array newAnimals che contiene gli oggetti con family user
         const newUsers = newIcons.filter(icona => icona.family == "user" )
@@ -202,41 +184,40 @@ $(document).ready(function () {
         //ogni volta che avviene il change cancella i div figli diretti del div icons 
         $('div.icons>div, i.fas, div.title').hide()
         //ciclo forEach per inserire gli oggetti che fanno parte di newUsers
-        newUsers.forEach(element => {
-          //console.log(element.name);
-          const user = `<div>
-          <i class="fas fa-${element.name}" style="color:${element.color}"></i>
-          <div class="title" style="text-transform:uppercase">${element.name}</div>
-          </div>
-          `; 
-          //console.log(icona);
-          container.innerHTML += user;
-        });
+        filterFunction(newUsers)
       }else{
         //console.log(newIcons);
         //ogni volta che avviene il change cancella i div figli diretti del div icons 
         $('div.icons>div, i.fas, div.title').hide()
         //ciclo forEach per inserire gli oggetti che fanno parte di newIcons
-        newIcons.forEach(element => {
-          //console.log(element.name);
-          const icona = `<div>
-          <i class="fas fa-${element.name}" style="color:${element.color}"></i>
-          <div class="title" style="text-transform:uppercase">${element.name}</div>
-          </div>
-          `; 
-          //console.log(icona);
-          container.innerHTML += icona;
-        });
+        filterFunction(newIcons)
       };
 	  
     });
     
-    //mostriamo come passare un parametro a change e contemporaneamente destrutturiamo
    
    
    
-   /* ---- FUNCTIONS ----*/
-   
-   });
+    /* ---- FUNCTIONS ----*/
 
-   
+    /**
+     * ## Funzione che andra a stampare un array specifico
+     * passare un array alla funzione per poter stampare nell'HTML tutti i suoi oggetti tramite un ciclo forEach
+     * @param {array} arrayFiltrato Il tipo di array che andrò a stampare nell'HTML
+     */
+    function filterFunction(arrayFiltrato){
+      arrayFiltrato.forEach(element => {
+       //console.log(element.name);
+       const icona = `<div>
+       <i class="fas fa-${element.name}" style="color:${element.color}"></i>
+       <div class="title" style="text-transform:uppercase">${element.name}</div>
+       </div>
+       `; 
+       //console.log(icona);
+       const container = document.querySelector('.icons')
+       container.innerHTML += icona;
+    
+     })
+   };  
+    
+   });
