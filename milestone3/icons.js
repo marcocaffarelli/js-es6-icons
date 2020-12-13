@@ -1,105 +1,134 @@
 $(document).ready(function () {
     // icone come da milestone 1
     // Creiamo array di oggetti per le icone con le seguenti proprieta: name, prefix, type, family 
-    const icons =  [
-      {
-      name : "cat",
-      prefix :"fas",
-      type : "fa",
-      family : "animali",
-      },
-      {
-      name : "crow",
-      prefix :"fas" ,
-      type : "fa",
-      family : "animali",
-      },
-      {
-      name : "dog",
-      prefix :"fas",
-      type : "fa",
-      family : "animali",
-      },
-      {
-      name : "dove",
-      prefix :"fas",
-      type : "fa",
-      family : "animali",
-      },
-      {
-      name : "dragon",
-      prefix :"fas",
-      type : "fa",
-      family : "animali",
-      },
-      {
-      name : "horse",
-      prefix :"fas",
-      type : "fa",
-      family : "animali",
-      },
-      {
-      name : "hippo",
-      prefix :"fas",
-      type : "fa",
-      family : "animali",
-      },
-      {
-      name : "fish",
-      prefix :"fas",
-      type : "fa",
-      family : "animali",
-      },
-      {
-      name : "pizza-slice",
-      prefix :"fas",
-      type : "fa",
-      family : "cibo",
-      },
-      {
-      name : "hotdog",
-      prefix :"fas",
-      type : "fa",
-      family : "cibo",
-      },
-      {
-      name : "bacon",
-      prefix :"fas",
-      type : "fa",
-      family : "cibo",
-      },
-      {
-      name : "hamburger",
-      prefix :"fas",
-      type : "fa",
-      family : "cibo",
-      },
-      {
-      name : "user-md",
-      prefix :"fas",
-      type : "fa",
-      family : "user",
-      },
-      {
-      name : "user-astronaut",
-      prefix :"fas",
-      type : "fa",
-      family : "user",
-      },
-      {
-      name : "user-ninja",
-      prefix :"fas",
-      type : "fa",
-      family : "user",
-      },
-      {
-      name : "user-secret",
-      prefix :"fas",
-      type : "fa",
-      family : "user",
+
+    //Creata una classe icone per non dover ripetere name, prefix, type e family per ogni oggetto dell'array
+    class Icone {
+      constructor(name, prefix, type, family) {
+        this.name = name;
+        this.prefix = prefix;
+        this.type = type;
+        this.family = family;
       }
+    }
+    const icons = [
+      new Icone ("cat", "fas", "fa", "animali"),
+      new Icone ("crow", "fas", "fa", "animali"),
+      new Icone ("dog", "fas", "fa", "animali"),
+      new Icone ("dove", "fas", "fa", "animali"),
+      new Icone ("dragon", "fas", "fa", "animali"),
+      new Icone ("horse", "fas", "fa", "animali"),
+      new Icone ("hippo", "fas", "fa", "animali"),
+      new Icone ("fish", "fas", "fa", "animali"),
+      new Icone ("pizza-slice", "fas", "fa", "cibo"),
+      new Icone ("hotdog", "fas", "fa", "cibo"),
+      new Icone ("bacon", "fas", "fa", "cibo"),
+      new Icone ("hamburger", "fas", "fa", "cibo"),
+      new Icone ("user-md", "fas", "fa", "user"),
+      new Icone ("user-astronaut", "fas", "fa", "user"),
+      new Icone ("user-ninja", "fas", "fa", "user"),
+      new Icone ("user-secret", "fas", "fa", "user")
 
     ]
+    // const icons =  [
+    //   {
+    //   name : "cat",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "animali",
+    //   },
+    //   {
+    //   name : "crow",
+    //   prefix :"fas" ,
+    //   type : "fa",
+    //   family : "animali",
+    //   },
+    //   {
+    //   name : "dog",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "animali",
+    //   },
+    //   {
+    //   name : "dove",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "animali",
+    //   },
+    //   {
+    //   name : "dragon",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "animali",
+    //   },
+    //   {
+    //   name : "horse",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "animali",
+    //   },
+    //   {
+    //   name : "hippo",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "animali",
+    //   },
+    //   {
+    //   name : "fish",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "animali",
+    //   },
+    //   {
+    //   name : "pizza-slice",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "cibo",
+    //   },
+    //   {
+    //   name : "hotdog",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "cibo",
+    //   },
+    //   {
+    //   name : "bacon",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "cibo",
+    //   },
+    //   {
+    //   name : "hamburger",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "cibo",
+    //   },
+    //   {
+    //   name : "user-md",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "user",
+    //   },
+    //   {
+    //   name : "user-astronaut",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "user",
+    //   },
+    //   {
+    //   name : "user-ninja",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "user",
+    //   },
+    //   {
+    //   name : "user-secret",
+    //   prefix :"fas",
+    //   type : "fa",
+    //   family : "user",
+    //   }
+
+    // ]
     console.log(icons);
 
     
